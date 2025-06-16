@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: black;
+  color: #333;
+}
+
+header {
+  background: black;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  color: #ffd700;
+  font-size: 1.8rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.contact-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, black, #ffd700);
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+.contact-header i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+
+.contact-form button:hover {
+  background: white;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  background: black;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  margin-top: 1rem;
+  color: #ffd700;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin-right: 1rem;
+  color: #ffd700;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e6bd00;
+}
+
+footer {
+  background: linear-gradient(to right, black, #ffd700);
+  ;
+  color: black;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-container p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.credit-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.credit-btn {
+  position: relative;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background: transparent;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.credit-btn:hover {
+  background-color: #fff;
+  color: white;
+}
+
+.popup-card {
+  display: none;
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 179, 0.4);
+  width: 250px;
+  z-index: 100;
+  text-align: left;
+}
+
+.credit-btn:hover .popup-card {
+  display: block;
+}
+
+.popup-card .social-links {
+  display: flex;
+  gap: 12px;
+  margin: 6px 0;
+}
+
+.popup-card .social-links a {
+  color: #ffd700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.popup-card .social-links a:hover {
+  text-decoration: underline;
+}
+
+.popup-card i {
+  margin-right: 6px;
+}
+
+.popup-card hr {
+  border-color: #ffee6e;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .popup-card {
+    width: 220px;
+    font-size: 14px;
+  }
+
+  .credit-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .credit-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon-wrapper-social {
+  position: relative;
+  display: inline-block;
+}
+
+.social-icon-wrapper-social i {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icon-wrapper-social:nth-child(1) i:hover {
+  color: #ffd700;
+  /* LinkedIn color */
+}
+
+.social-icon-wrapper-social:nth-child(2) i:hover {
+  color: #ffd700;
+  /* Instagram color */
+}
+
+.popup-card-social {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  padding: 8px 12px;
+  width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: none;
+  z-index: 999;
+  text-align: center;
+}
+
+.social-icon-wrapper-social:hover .popup-card-social {
+  display: block;
+}
+
+.popup-card-social p {
+  margin: 4px 0;
+  font-size: 0.85em;
+}
+
+.popup-btn-social {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 5px 10px;
+  background-color: white;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon-wrapper-social:nth-child(2) .popup-btn-social {
+  background-color: white;
+}

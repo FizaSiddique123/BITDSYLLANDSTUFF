@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Routine - Bitdsyll & Stuff</title>
+  <link rel="stylesheet" href="routine.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpeg" alt="Bitdsyll Logo" />
+      <h1>Bitdsyll & Stuff</h1>
+    </a>
+    <nav>
+      <div class="dropdown">
+        <a href="materials.html" class="dropbtn">Materials</a>
+
+      </div>
+      <div class="dropdown">
+        <a href="clubs.html" class="dropbtn">Clubs & Societies</a>
+
+      </div>
+      <a href="calendar.html">Calendar</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="routine-header"> <i class="fas fa-calendar-alt"></i> Weekly Class Routine</div>
+
+  <div class="view-toggle">
+    <button class="active" onclick="switchView('routine')"> <i class="fas fa-calendar-week"></i> Interactive
+      View</button>
+    <button onclick="switchView('pdf')"> <i class="fas fa-file-pdf"></i> PDF View</button>
+  </div>
+
+  <!-- Interactive Table View -->
+  <div class="routine-view active">
+    <table class="routine-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>9:00 - 10:00</th>
+          <th>10:00 - 11:00</th>
+          <th>11:00 - 12:00</th>
+          <th>12:00 - 1:00</th>
+          <th>2:00 - 3:00</th>
+          <th>3:00 - 4:00</th>
+          <th>4:00 - 5:00</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td class="highlight">Math</td>
+          <td>Physics</td>
+          <td>Break</td>
+          <td>EVS</td>
+          <td class="highlight">BME Lab</td>
+          <td>BEE</td>
+          <td>Free</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>BEE</td>
+          <td>Math</td>
+          <td class="highlight">Workshop</td>
+          <td>Break</td>
+          <td>Physics Lab</td>
+          <td>Free</td>
+          <td>Free</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>Physics</td>
+          <td class="highlight">BME</td>
+          <td>Math</td>
+          <td>Break</td>
+          <td>BEE</td>
+          <td>Free</td>
+          <td>Free</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td class="highlight">BEE Lab</td>
+          <td>Physics</td>
+          <td>Break</td>
+          <td>Math</td>
+          <td>BME</td>
+          <td>EVS</td>
+          <td>Free</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Workshop</td>
+          <td class="highlight">Physics Lab</td>
+          <td>Break</td>
+          <td>Math</td>
+          <td>BEE</td>
+          <td>Free</td>
+          <td>Free</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PDF View -->
+  <div class="pdf-view">
+    <div class="pdf-container" id="pdfContainer">
+      <!-- Modern PDF Viewer using PDF.js -->
+      <iframe id="pdfViewer" src="files/class routine .pdf" width="100%" height="100%"
+        style="max-width: 100%; border: none;">
+        <p>Your browser does not support embedded PDFs. <a href="files/class routine .pdf">Download the
+            PDF</a>.</p>
+      </iframe>
+    </div>
+    <div style="text-align: center; margin-top: 15px;">
+      <!-- Updated with SVG icon instead of emoji -->
+      <a href="files/class routine .pdf" download class="download-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 0a1 1 0 0 1 1 1v11.586l2.707-2.707a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L7 12.586V1a1 1 0 0 1 1-1z" />
+        </svg> Download PDF
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer-container">
+    <div class="footer-top">
+      <p>&copy; 2025 Bitdsyll & Stuff | All rights reserved</p>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="credit-section">
+        <p>Website & Design Credits:</p>
+        <div class="credit-buttons">
+          <div class="credit-btn">
+            @FizaSiddique
+            <div class="popup-card">
+              <strong>Connect with Fiza:</strong>
+              <div class="social-links">
+                <a href="https://www.instagram.com/fizasi.que/" target="_blank">
+                  <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.linkedin.com/in/fiza-siddique-82080b251/" target="_blank">
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+              </div>
+              <hr>
+              <p>Website creation & development.</p>
+              <p>Crafted with ❤️ by Fiza for Bitdsyll & Stuff.</p>
+            </div>
+          </div>
+          <div class="credit-btn">
+            @SujalKumar
+            <div class="popup-card">
+              <strong>Connect with Sujal:</strong>
+              <div class="social-links">
+                <a href="https://www.instagram.com/sujalchoudhary_1/" target="_blank">
+                  <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://linkedin.com/in/sujal-kumar-75a5b3322" target="_blank">
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+              </div>
+              <hr>
+              <p>Creative inspiration & support.</p>
+              <p>Design muse for Bitdsyll & Stuff.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="routine.js"></script>
+</body>
+
+</html>

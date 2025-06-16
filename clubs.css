@@ -1,0 +1,310 @@
+body {
+  background: linear-gradient(to right, #0a0a0a, #141414);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  color: #ff6ec7;
+  font-size: 1.8rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+nav a {
+  margin-left: 30px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff6ec7;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+nav a:hover::after,
+nav a.active::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #ff6ec7;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.club-icon {
+  font-size: 2rem;
+  color: #ff6ec7;
+  margin-bottom: 10px;
+}
+
+
+.clubs-header {
+  text-align: center;
+  color: #ff6ec7;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.clubs-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.club-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.club-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.club-card h3 {
+  font-size: 1.5rem;
+  color: #ff6ec7;
+}
+
+.club-card p {
+  color: #ddd;
+  margin: 10px 0;
+}
+
+.club-btn {
+  background-color: #ff6ec7;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.club-btn:hover {
+  background-color: #f28ab2;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, black, #ff6ec7, black);
+  ;
+  backdrop-filter: blur(10px);
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  background-color: #0e0e0e;
+  padding: 20px;
+  text-align: center;
+  color: black;
+  position: relative;
+}
+
+.footer-container p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.credit-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.credit-btn {
+  position: relative;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background: transparent;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.credit-btn:hover {
+  background-color: #ff6ec7;
+  color: black;
+}
+
+.popup-card {
+  display: none;
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a1a1a;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 179, 0.4);
+  width: 250px;
+  z-index: 100;
+  text-align: left;
+}
+
+.credit-btn:hover .popup-card {
+  display: block;
+}
+
+.popup-card .social-links {
+  display: flex;
+  gap: 12px;
+  margin: 6px 0;
+}
+
+.popup-card .social-links a {
+  color: #ff6ec7;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.popup-card .social-links a:hover {
+  text-decoration: underline;
+}
+
+.popup-card i {
+  margin-right: 6px;
+}
+
+.popup-card hr {
+  border-color: #ff6ec7;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .popup-card {
+    width: 220px;
+    font-size: 14px;
+  }
+
+  .credit-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .credit-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.instagram-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.instagram-popup-card {
+  background: black;
+  border-radius: 12px;
+  padding: 24px;
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.instagram-popup-content h2 {
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.instagram-popup-link {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #ff6ec7;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.instagram-popup-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 24px;
+  cursor: pointer;
+}

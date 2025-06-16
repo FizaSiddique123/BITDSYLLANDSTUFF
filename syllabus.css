@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: black;
+  color: #333;
+}
+
+header {
+  background: black;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  color: #ff9a00;
+  font-size: 1.8rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+
+
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff9a00;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+.syllabus-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, black, #ff9a00, black);
+  color: white;
+}
+
+.syllabus-header i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.syllabus-header h2 {
+  font-size: 2.5rem;
+}
+
+.syllabus-header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.syllabus-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.syllabus-card {
+  background: black;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.syllabus-card h3 {
+  color: #ff9a00;
+  margin-bottom: 1rem;
+}
+
+.syllabus-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #ff9a00;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.syllabus-btn i {
+  margin-right: 8px;
+}
+
+.syllabus-btn:hover {
+  background-color: #ff9a00;
+}
+
+footer {
+  background: linear-gradient(to right, black, #ff9a00, black);
+  ;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  background-color: #ff9a00;
+  padding: 20px;
+  text-align: center;
+  color: black;
+  position: relative;
+}
+
+.footer-container p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.credit-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.credit-btn {
+  position: relative;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  background: transparent;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.credit-btn:hover {
+  background-color: #fff;
+  color: white;
+}
+
+.popup-card {
+  display: none;
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a1a1a;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 179, 0.4);
+  width: 250px;
+  z-index: 100;
+  text-align: left;
+}
+
+.credit-btn:hover .popup-card {
+  display: block;
+}
+
+.popup-card .social-links {
+  display: flex;
+  gap: 12px;
+  margin: 6px 0;
+}
+
+.popup-card .social-links a {
+  color: #ff9a00;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.popup-card .social-links a:hover {
+  text-decoration: underline;
+}
+
+.popup-card i {
+  margin-right: 6px;
+}
+
+.popup-card hr {
+  border-color: #ff9a00;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .popup-card {
+    width: 220px;
+    font-size: 14px;
+  }
+
+  .credit-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .credit-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
