@@ -82,7 +82,7 @@ nav a:hover::after {
   animation: zoomInOut 10s infinite alternate;
 }
 
-.parallax-text {
+/* .parallax-text {
   color: #ffffff;
   font-size: 3vw;
   font-weight: bold;
@@ -102,7 +102,38 @@ nav a:hover::after {
 .parallax-text span {
   display: block;
   margin: 0 auto;
+} */
+
+.parallax-text {
+  color: #ffffff;
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  max-width: 90%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  letter-spacing: 3px;
+  animation: fadeInText 2s ease-out, typewriter 4s steps(40) 1s forwards, shadowPulse 2s infinite alternate;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  position: relative;
+  z-index: 10;
 }
+
+.parallax-text span {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive adjustment for mobile screens */
+@media screen and (max-width: 768px) {
+  .parallax-text {
+    font-size: 4.5vw;
+    padding: 10px;
+  }
+}
+
 
 @keyframes zoomInOut {
   0% {
@@ -652,5 +683,19 @@ footer {
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .parallax-text {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    max-width: 95%;
+  }
+
+  .parallax-text span {
+    display: block;
+    margin-bottom: 0.7rem;
+    line-height: 1.4;
   }
 }
