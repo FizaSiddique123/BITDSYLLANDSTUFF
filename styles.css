@@ -603,3 +603,54 @@ footer {
     align-items: center;
   }
 }
+
+/* Hamburger Base */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+}
+
+/* Hide the checkbox input */
+#menu-toggle {
+  display: none;
+}
+
+/* Navigation base styles */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  #menu-toggle:checked+.hamburger+.nav-links {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
+}
