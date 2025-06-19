@@ -36,7 +36,7 @@ header {
 }
 
 .logo h1 {
-  color: navy;
+  color: azure;
   font-size: 1.8rem;
   animation: fadeInDown 1s ease-in-out;
 }
@@ -60,7 +60,7 @@ nav a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: navy;
+  background: azure;
   transition: width 0.3s ease;
 }
 

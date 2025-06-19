@@ -24,8 +24,8 @@ const materials = [
     name: 'BEC',
     icon: 'fas fa-microchip',
     description: 'BEC materials including Theory and Practical',
-    theoryFile: 'files/physics-theory.pdf',
-    practicalFile: 'files/Bec lab copy.pdf',
+    theoryFile: 'xyz.pdf',
+    practicalFile: 'xyz.pdf',
   },
   {
     name: 'Physics',
@@ -52,8 +52,8 @@ const materials = [
     name: 'Mathematics:1',
     icon: 'fas fa-calculator',
     description: 'Mathematics 1 materials including Theory and Practical',
-    theoryFile: 'files/physics-theory.pdf',
-    practicalFile: 'files/pps.pdf',
+    theoryFile: 'theory.pdf',
+    practicalFile: 'xyz.pdf',
   },
   {
     name: 'Mathematics:2',
@@ -67,7 +67,7 @@ const materials = [
     icon: 'fas fa-battery-half',
     description: 'BEE materials including Theory and Practical',
     theoryFile: 'files/ravish r singh bee.pdf',
-    practicalFile: 'files/Bee practical.pdf',
+    practicalFile: 'xyz.pdf',
   },
 ];
 

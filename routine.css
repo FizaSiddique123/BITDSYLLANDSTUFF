@@ -29,7 +29,7 @@ header {
 }
 
 .logo h1 {
-  color: #00ffb3;
+  color: #bf6fff;
   font-size: 1.8rem;
   animation: fadeInDown 1s ease-in-out;
 }
@@ -222,7 +222,7 @@ nav a.active::after {
 footer {
   text-align: center;
   padding: 20px;
-  background: linear-gradient(to right, black, #bf6fff);
+  background: linear-gradient(to right, black, #bf6fff, black);
   ;
   backdrop-filter: blur(10px);
   margin-top: 40px;

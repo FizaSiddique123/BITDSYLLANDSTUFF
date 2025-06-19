@@ -277,7 +277,7 @@ nav a.active::after {
 footer {
   text-align: center;
   padding: 20px;
-  background: linear-gradient(to right, black, #00ffb3);
+  background: linear-gradient(to right, black, #00ffb3, black);
   ;
   backdrop-filter: blur(10px);
   margin-top: 40px;
